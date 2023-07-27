@@ -32,4 +32,4 @@ class UserRepository:
 
     @staticmethod
     def authenticate(db: Session, user: User) -> User:
-        return db.query(User).filter(User.email == user.email).filter(User.senha == user.senha).first()
+        return db.query(User).filter(User.email == user.email).filter(User.password == user.password).first()

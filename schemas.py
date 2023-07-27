@@ -1,9 +1,9 @@
 from pydantic import BaseModel
 
 class UserBase(BaseModel):
-    nome: str
+    name: str
     email: str
-    senha: str
+    password: str
 
 class UserRequest(UserBase):
     ...
@@ -16,7 +16,7 @@ class UserResponse(UserBase):
 
 class AuthenticateBase(BaseModel):
     email: str
-    senha: str
+    password: str
 
 class AuthenticateRequest(AuthenticateBase):
     ...
